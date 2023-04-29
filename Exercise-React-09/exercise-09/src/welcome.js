@@ -21,7 +21,7 @@ const Welcome = (props) => {
         </h1>
       </div>
     );
-  }
+  };
 };
 
 export default Welcome;
