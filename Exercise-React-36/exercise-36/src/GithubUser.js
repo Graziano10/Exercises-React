@@ -15,7 +15,7 @@ export const GithubUser = ({ username }) => {
         setData(response.data);
         setLoading(false);
       } catch (error) {
-        console.log("Error:", error);
+        console.log('Error 1001');
         setLoading(false);
       }
     };
