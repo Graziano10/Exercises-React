@@ -1,12 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
+import ShowGithubUser from "./ShowGithubUser";
 
 const GithubUserList = () => {
-  const userList = ["user1", "user2", "user3"];
+  const userList = ['user1', 'user2', 'user3'];
 
   return (
     <div>
-      <h2>Github User List</h2>
+      <h1>GitHub User List</h1>
+
+      <Route exact path="/users">
+        <p>Add user</p>
+      </Route>
+
       <ul>
         {userList.map((username) => (
           <li key={username}>
@@ -14,8 +20,10 @@ const GithubUserList = () => {
           </li>
         ))}
       </ul>
+
+      <Route path="/users/:username" component={ShowGithubUser} />
     </div>
   );
-};
+}
 
 export default GithubUserList;
